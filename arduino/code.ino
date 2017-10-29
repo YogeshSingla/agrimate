@@ -17,23 +17,10 @@ void loop()
   int chk = DHT.read11(DHT11_PIN);
   lcd.clear();
   lcd.setCursor(0,0); 
-  lcd.print("Reading");
-  lcd.setCursor(0,1);
-  lcd.print("Temperature");
-  delay(1000);
-  lcd.clear();
-  lcd.setCursor(0,0);\
-  lcd.print("Temp = ");
+  lcd.print("T = ");
   lcd.print(DHT.temperature);
-  lcd.print("C");
-  delay(2000);
-  lcd.clear();
-  lcd.print("Reading");
-  lcd.setCursor(0,1);
-  lcd.print("Humidity");
-  delay(1000);
-  lcd.clear();
-  lcd.print("Humidity=");
+  lcd.print("C ");
+  lcd.print("H =  ");
   lcd.print(DHT.humidity);
   lcd.print("%");
   delay(2000);
