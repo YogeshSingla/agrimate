@@ -17,9 +17,9 @@ void loop()
   int chk = DHT.read11(DHT11_PIN);
   lcd.clear();
   lcd.setCursor(0,0); 
-  lcd.print("T = ");
+  lcd.print("T = ");//testing the commit 
   lcd.print(DHT.temperature);
-  lcd.print("C ");
+  lcd.print("C ");//also testing commit
   lcd.print("H =  ");
   lcd.print(DHT.humidity);
   lcd.print("%");
