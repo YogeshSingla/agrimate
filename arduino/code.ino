@@ -22,7 +22,7 @@ void loop()
   lcd.print("Temperature");
   delay(1000);
   lcd.clear();
-  lcd.setCursor(0,0);\
+  lcd.setCursor(0,0);
   lcd.print("Temp = ");
   lcd.print(DHT.temperature);//reading temperature from sensor 
   lcd.print("C");
