@@ -16,7 +16,7 @@ void loop()
 {
   int chk = DHT.read11(DHT11_PIN);
   lcd.clear();
-  lcd.setCursor(0,0); //jhkjhjbhuijhu
+  lcd.setCursor(0,0);
   lcd.print("Reading");
   lcd.setCursor(0,1);
   lcd.print("Temperature");
@@ -32,7 +32,7 @@ void loop()
   lcd.setCursor(0,1);
   lcd.print("Humidity");
   delay(1000);
-  lcd.clear();//testing git push
+  lcd.clear();//
   lcd.print("Humidity=");
   lcd.print(DHT.humidity);//reading humidity from sensor
   lcd.print("%");
