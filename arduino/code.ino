@@ -36,5 +36,18 @@ void loop()
   lcd.print("Humidity=");
   lcd.print(DHT.humidity);//reading humidity from sensor
   lcd.print("%");
-  delay(2000);
+/*int sm;//soil moisture
+  sm=analogRead(A0);//reading analog value from sensor via pin A0
+  if(sm<$predetermined value)
+  	{
+		digitalWrite(8,HIGH);//opening solenoid valve
+  		while(sm<$predetermined value)
+		{
+			delay(100)//polling rate is 100ms
+			sm=analogRead(A0);//getting new soil %
+		}
+	digitalWrite(8,LOW);//closing solenoid valve
+  
+  	}*/
+  delay(2000);//standard polling rate of 2 seconds
 }
