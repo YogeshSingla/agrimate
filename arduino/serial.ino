@@ -7,11 +7,13 @@ const int inPin = 0;//Initialising pin to read value from temperature sensor
 const int soilm=A0;
 void setup()
 {
+  pinMode(13,OUTPUT);//digital pin for solenoid triggering. led placeholder
   lcd.begin(16,2); //Initialising LCD 
   Serial.begin(9600);
 }
 void loop()
 {
+  digitalWrite(13,LOW);
   int chk = DHT.read11(DHT11_PIN);
   float soil;
   Serial.print("\nReading temperature\n");
@@ -31,5 +33,7 @@ void loop()
   soil=analogRead(soilm);
   soil=map(soil,1023,370,0,100);//these values will have to be changed later 
   Serial.print(soil);
+  if (soil<50)//50% cutoff, to be changed later
+  digitalWrite(13,HIGH);//opening solenoid, here toggling LED on
   delay(2000);
 }
